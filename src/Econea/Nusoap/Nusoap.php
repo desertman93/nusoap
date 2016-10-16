@@ -1,4 +1,4 @@
-<?php
+<?php namespace Econea\Nusoap;
 
 /*
 $Id: nusoap.php,v 1.123 2010/04/26 20:15:08 snichol Exp $
@@ -8105,7 +8105,7 @@ class nusoap_client extends nusoap_base
                 unset($paramCommentStr);
             }
         }
-        $evalStr = 'class nusoap_proxy_' . $r . ' extends nusoap_client {
+        $evalStr = 'class nusoap_proxy_' . $r . ' extends Econea\Nusoap\nusoap_client {
 	' . $evalStr . '
 }';
         return $evalStr;
